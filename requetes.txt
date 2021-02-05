@@ -1,0 +1,8 @@
+exo 1:
+
+SELECT ville_population_2012 FROM villes_france_free ORDER BY ville_population_2012 DESC limit 10;
+
+exo 2:
+
+SELECT ville_surface FROM villes_france_free ORDER BY ville_surface DESC
+limit 50;
