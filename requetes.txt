@@ -6,3 +6,16 @@ exo 2:
 
 SELECT ville_surface FROM villes_france_free ORDER BY ville_surface DESC
 limit 50;
+
+exo3:
+
+SELECT * FROM departement WHERE departement_code LIKE '97%';
+
+exo4:
+
+SELECT ville_nom,departement_code FROM villes_france_free LEFT JOIN departement ON departeme
+nt_code = ville
+
+exo5:
+
+
