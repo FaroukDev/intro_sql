@@ -1,10 +1,10 @@
 exo 1:
 
-SELECT ville_population_2012 FROM villes_france_free ORDER BY ville_population_2012 DESC limit 10;
+SELECT ville_nom,ville_population_2012 FROM villes_france_free ORDER BY ville_population_2012 DESC limit 10;
 
 exo 2:
 
-SELECT ville_surface FROM villes_france_free ORDER BY ville_surface DESC
+SELECT ville_surface FROM villes_france_free ORDER BY ville_surface ASC
 limit 50;
 
 exo3:
@@ -13,9 +13,10 @@ SELECT * FROM departement WHERE departement_code LIKE '97%';
 
 exo4:
 
-SELECT ville_nom,departement_code FROM villes_france_free LEFT JOIN departement ON departeme
-nt_code = ville
+SELECT ville_population_2012,ville_nom,departement_code FROM villes_france_free LEFT JOIN departement ON departement_code = ville_departement ORDER BY ville_population_201
+2 DESC limit 10\G
 
 exo5:
 
+SELECT departement_nom, ville_departement, COUNT(*) AS items FROM villes_france_free INNER JOIN departement ON departement_code = ville_departement GROUP BY ville_departement ORDER BY items DESC;
 
